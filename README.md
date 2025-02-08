@@ -1,2 +1,7 @@
-# TodoApp-FlutterFlow
-FlutterFlow To-Do app that tracks tasks. CSC 305 Assignment.
+# Todo
+
+A new Flutter project.
+
+## Getting Started
+
+FlutterFlow projects are built to run on the Flutter _stable_ release.
