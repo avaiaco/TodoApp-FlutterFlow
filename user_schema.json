@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "uid": {
+        "type": "string"
+      },
+      "birthday": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "created_time": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "display_name": {
+        "type": "string"
+      },
+      "email": {
+        "type": "string",
+        "format": "email"
+      },
+      "fav_band": {
+        "type": "string"
+      },
+      "photo_url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": ["uid", "birthday", "created_time", "display_name", "email"]
+  }
+  
