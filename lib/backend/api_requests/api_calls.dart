@@ -1,4 +1,6 @@
 import 'dart:convert';
+import '../cloud_functions/cloud_functions.dart';
+
 import 'package:flutter/foundation.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
@@ -10,19 +12,14 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 
 class GetQuoteCall {
   static Future<ApiCallResponse> call() async {
-    return ApiManager.instance.makeApiCall(
-      callName: 'getQuote',
-      apiUrl: 'https://zenquotes.io/api/random',
-      callType: ApiCallType.GET,
-      headers: {},
-      params: {},
-      returnBody: true,
-      encodeBodyUtf8: false,
-      decodeUtf8: false,
-      cache: false,
-      isStreamingApi: false,
-      alwaysAllowBody: false,
+    final response = await makeCloudCall(
+      _kPrivateApiFunctionName,
+      {
+        'callName': 'GetQuoteCall',
+        'variables': {},
+      },
     );
+    return ApiCallResponse.fromCloudCallResponse(response);
   }
 
   static String? quote(dynamic response) => castToType<String>(getJsonField(
