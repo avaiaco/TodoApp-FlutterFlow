@@ -240,6 +240,7 @@ class _TasksWidgetState extends State<TasksWidget> {
                               24.0, 12.0, 24.0, 12.0),
                           child: Text(
                             _model.getQuote,
+                            textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
